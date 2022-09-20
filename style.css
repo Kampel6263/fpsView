@@ -1,0 +1,60 @@
+body {
+  background: rgb(71, 71, 71);
+  color: white;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  background: rgb(255, 0, 64);
+  position: absolute;
+  left: 0;
+  top: 150px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  line-height: 100px;
+}
+.block:hover {
+  z-index: 1000;
+}
+.block:hover::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 550px;
+  background: rgb(72, 255, 0);
+  position: absolute;
+  left: 50%;
+  top: 0px;
+}
+.block:hover::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 550px;
+  background: rgb(72, 255, 0);
+  position: absolute;
+  left: 100%;
+  top: 0px;
+}
+.block#block1::after, .block#block1::before {
+  top: 0px;
+}
+.block#block2 {
+  top: 300px;
+}
+.block#block2::after, .block#block2::before {
+  top: -150px;
+}
+.block#block3 {
+  top: 450px;
+}
+.block#block3::after, .block#block3::before {
+  top: -300px;
+}
+.block#block4 {
+  top: 600px;
+}
+.block#block4::after, .block#block4::before {
+  top: -450px;
+}/*# sourceMappingURL=style.css.map */
